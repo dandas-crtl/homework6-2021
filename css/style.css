@@ -22,9 +22,15 @@ header{
   border-bottom: 3px solid #50C7C7;
 }
 
-@keyframes gallery {
+@keyframes logo {
   from {top: 0px;}
   to {top: 200px;}
+}
+
+body > header img{
+  animation-name: logo;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
 }
 
 body > header {
@@ -100,6 +106,7 @@ a.skip:focus{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -152,10 +159,10 @@ a.skip:focus{
 }
 
 .gallery{
-  /*min-height: 600px;*/
+  min-height: 600px;
   display: flex;
-  align-items: center;
-  padding: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .gallery > img{
