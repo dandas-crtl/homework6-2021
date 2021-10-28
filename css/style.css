@@ -23,8 +23,8 @@ header{
 }
 
 @keyframes logo {
-  from {top: 0px;}
-  to {top: 200px;}
+  0% {width: 50px; opacity: 0;}
+  100% {width: 425px; opacity: 1;}
 }
 
 body > header img{
@@ -35,7 +35,7 @@ body > header img{
 
 body > header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   position: sticky;
