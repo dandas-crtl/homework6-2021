@@ -22,20 +22,9 @@ header{
   border-bottom: 3px solid #50C7C7;
 }
 
-@keyframes logo {
-  0% {width: 50px; opacity: 0;}
-  100% {width: 425px; opacity: 1;}
-}
-
-body > header img{
-  animation-name: logo;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-}
-
 body > header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   position: sticky;
@@ -43,6 +32,19 @@ body > header {
   top: 0;
   background-color: #f1f1f1
 }
+
+@keyframes logo {
+  0% {width: 50px; opacity: 0;}
+  100% {width: 425px; opacity: 1;}
+}
+
+
+body > header img{
+  animation-name: logo;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+
 
 h1{
   font-size: 2em;
@@ -185,4 +187,55 @@ footer{
       transform: scaleY(1.1);
       z-index: -99;
 }
+.nav_links {
+  display: flex;
+  flex-direction: row;
+}
+.top-header{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+}
+}
+@media print{
+  body{
+    background-image: none;
+  }
+  nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; 
+  }
+
+  .nav_links{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .pricing{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+  }
+  .gallery, #gallery{
+    display: none;
+  }
+
+
+  .card{
+    border: solid 2px #45ADDD;
+    flex-basis: 250px;
+  }
+
+  .card ul li:nth-child(even):after{
+    content: '\1F44D';
+  }
+
+  .card ul li:nth-child(odd):before{
+    content: '\1F44D';
+  }
 }
